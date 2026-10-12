@@ -549,11 +549,20 @@ img {
     width: 100%;
     height: auto;
     aspect-ratio: 9 / 16;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .video-card--feature .video-frame video {
     aspect-ratio: 16 / 9;
+}
+
+.video-frame video:fullscreen,
+.video-frame video:-webkit-full-screen {
+    width: 100vw;
+    height: 100vh;
+    aspect-ratio: auto;
+    object-fit: contain;
+    background: #000;
 }
 
 .video-card-body {
