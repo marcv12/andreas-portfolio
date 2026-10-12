@@ -478,10 +478,18 @@ img {
     font-weight: 500;
 }
 
+.edu-location,
 .edu-date {
     font-size: 0.8rem;
     color: var(--text-light);
+}
+
+.edu-location {
     margin-top: 8px;
+}
+
+.edu-date {
+    margin-top: 2px;
 }
 
 /* ===== Projects ===== */
