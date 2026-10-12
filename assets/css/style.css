@@ -323,7 +323,7 @@ img {
 /* ===== Experience Timeline ===== */
 #experience {
     padding: 100px 0;
-    background: var(--bg-alt);
+    background: var(--bg);
 }
 
 .timeline {
@@ -359,7 +359,7 @@ img {
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background: var(--bg-alt);
+    background: var(--bg);
     border: 3px solid var(--accent);
 }
 
@@ -425,7 +425,7 @@ img {
 /* ===== Education ===== */
 #education {
     padding: 100px 0;
-    background: var(--bg);
+    background: var(--bg-alt);
 }
 
 .edu-grid {
@@ -437,7 +437,7 @@ img {
 }
 
 .edu-card {
-    background: var(--bg-alt);
+    background: var(--bg);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 36px 28px;
@@ -488,6 +488,114 @@ img {
 #projects {
     padding: 100px 0;
     background: var(--bg-alt);
+}
+
+.section-intro {
+    max-width: 640px;
+    margin: -20px auto 40px;
+    color: var(--text-light);
+    text-align: center;
+    font-size: 0.98rem;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-bottom: 80px;
+}
+
+.video-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.09);
+}
+
+.video-card--feature {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 0.9fr);
+    align-items: center;
+}
+
+.video-grid > .video-card:not(.video-card--feature) {
+    width: min(100%, 380px);
+    justify-self: center;
+}
+
+.video-frame {
+    background: #1f1f1f;
+}
+
+.video-frame video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+}
+
+.video-card--feature .video-frame video {
+    aspect-ratio: 16 / 9;
+}
+
+.video-card-body {
+    padding: 22px 22px 26px;
+}
+
+.video-card--feature .video-card-body {
+    padding: 32px;
+}
+
+.video-type {
+    margin-bottom: 8px;
+    color: var(--accent);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.video-card h3 {
+    margin-bottom: 9px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.video-card--feature h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+}
+
+.video-card-body > p:last-child {
+    color: var(--text-light);
+    font-size: 0.86rem;
+    line-height: 1.6;
+}
+
+.more-projects-heading {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.more-projects-heading h3 {
+    margin-bottom: 8px;
+    font-size: 1.55rem;
+}
+
+.more-projects-heading p {
+    color: var(--text-light);
+    font-size: 0.9rem;
 }
 
 .projects-grid {
@@ -664,6 +772,14 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .video-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .video-card--feature {
+        grid-template-columns: 1fr;
+    }
+
     .nav-links {
         gap: 20px;
     }
@@ -707,5 +823,33 @@ footer {
 
     .timeline {
         padding-left: 32px;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: 370px;
+        margin: 0 auto 64px;
+    }
+
+    .video-card--feature .video-card-body {
+        padding: 22px 22px 26px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .fade-in {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .video-card,
+    .btn {
+        transition: none;
     }
 }

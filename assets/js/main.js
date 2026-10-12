@@ -1,23 +1,34 @@
 // Smooth scrolling for nav links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+
+        if (href === '#') {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior });
+            return;
+        }
+
+        const target = document.querySelector(href);
         if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            e.preventDefault();
+            target.scrollIntoView({ behavior, block: 'start' });
         }
     });
 });
 
 // Navbar background on scroll
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
+const updateNav = () => {
     if (window.scrollY > 50) {
         nav.classList.add('scrolled');
     } else {
         nav.classList.remove('scrolled');
     }
-});
+};
+window.addEventListener('scroll', updateNav, { passive: true });
+updateNav();
 
 // Fade-in on scroll
 const observerOptions = {
@@ -36,6 +47,16 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.timeline-item, .skill-card, .stat-card, .project-card, .edu-card').forEach(el => {
     el.classList.add('fade-in');
     observer.observe(el);
+});
+
+// Keep the focus on the video the visitor chose to watch.
+const videos = document.querySelectorAll('.video-card video');
+videos.forEach(video => {
+    video.addEventListener('play', () => {
+        videos.forEach(other => {
+            if (other !== video) other.pause();
+        });
+    });
 });
 
 // Stagger animation for skill cards

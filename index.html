@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=4">
 </head>
 <body>
 
@@ -18,8 +18,8 @@
             <a href="#" class="nav-logo">AV</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
+                <li><a href="#projects">Work</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -28,12 +28,12 @@
     <!-- Hero -->
     <section id="hero">
         <div class="hero-content">
-            <p class="hero-tag">Digital Marketing &bull; Strategy &bull; Storytelling</p>
+            <p class="hero-tag">Digital Marketing &bull; Video &bull; Strategy</p>
             <h1>Hi, I'm <span class="highlight">Andreas Violides</span></h1>
             <p class="hero-sub">MBA graduate and multilingual marketer turning data into stories and strategies into results. Based in Rome, Italy.</p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                <a href="#experience" class="btn btn-outline">See My Work</a>
+                <a href="#projects" class="btn btn-outline">Watch My Work</a>
             </div>
             <div class="hero-languages">
                 <span>English</span>
@@ -99,6 +99,89 @@
                     <i class="fas fa-users"></i>
                     <h3>Project Management</h3>
                     <p>End-to-end coordination of events, campaigns, and cross-functional teams in multicultural environments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected work -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Selected Work</h2>
+            <p class="section-intro">A selection spanning narrative film, product visuals, and brand concepts. Press play to watch each piece.</p>
+
+            <div class="video-grid" aria-label="Video work samples">
+                <article class="video-card video-card--feature">
+                    <div class="video-frame">
+                        <video controls playsinline preload="none" poster="assets/media/narrative-film.jpg" width="960" height="540" aria-label="Watch narrative film scene">
+                            <source src="assets/media/narrative-film.mp4" type="video/mp4">
+                            Your browser does not support video. <a href="assets/media/narrative-film.mp4">Open the narrative film</a>.
+                        </video>
+                    </div>
+                    <div class="video-card-body">
+                        <p class="video-type">Narrative film <span aria-hidden="true">&bull;</span> 1:13</p>
+                        <h3>Late-night dialogue</h3>
+                        <p>A character-led scene built on restrained performances, warm practical light, and a tense apartment setting.</p>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="video-frame">
+                        <video controls playsinline preload="none" poster="assets/media/cocktail-film.jpg" width="720" height="1280" aria-label="Watch cocktail product film">
+                            <source src="assets/media/cocktail-film.mp4" type="video/mp4">
+                            Your browser does not support video. <a href="assets/media/cocktail-film.mp4">Open the cocktail film</a>.
+                        </video>
+                    </div>
+                    <div class="video-card-body">
+                        <p class="video-type">Product film <span aria-hidden="true">&bull;</span> 0:15</p>
+                        <h3>Cocktail visual story</h3>
+                        <p>Close-up pours, texture, and a warm evening setting come together in a concise product piece.</p>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="video-frame">
+                        <video controls playsinline preload="none" poster="assets/media/lg-concept.jpg" width="720" height="1280" aria-label="Watch LG air-conditioning concept video">
+                            <source src="assets/media/lg-concept.mp4" type="video/mp4">
+                            Your browser does not support video. <a href="assets/media/lg-concept.mp4">Open the LG concept video</a>.
+                        </video>
+                    </div>
+                    <div class="video-card-body">
+                        <p class="video-type">Brand concept <span aria-hidden="true">&bull;</span> 0:39</p>
+                        <h3>LG: Escape the Heat</h3>
+                        <p>A concept film that moves from summer heat to the comfort of a cool home interior.</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="more-projects-heading">
+                <h3>Strategy &amp; research</h3>
+                <p>Academic projects exploring product positioning and new business models.</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-gamepad"></i></div>
+                    <h3>Infinite Realms</h3>
+                    <p class="project-type">MBA Thesis</p>
+                    <p>Developed a feasibility study and business model for an AI-driven gaming platform delivering personalized, dynamic game worlds. Applied market research, audience segmentation, and financial forecasting to design a scalable digital product strategy.</p>
+                    <div class="project-tags">
+                        <span>Business Strategy</span>
+                        <span>Market Research</span>
+                        <span>AI</span>
+                        <span>Financial Modeling</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-drone"></i></div>
+                    <h3>Deliver-e</h3>
+                    <p class="project-type">Academic Project</p>
+                    <p>Proposed a business model for drone-based food delivery, designed to increase operational efficiency and customer satisfaction. Developed branding, UX flow, and go-to-market positioning strategy.</p>
+                    <div class="project-tags">
+                        <span>Product Marketing</span>
+                        <span>UX Design</span>
+                        <span>Branding</span>
+                        <span>Go-to-Market</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -206,39 +289,6 @@
         </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-icon"><i class="fas fa-gamepad"></i></div>
-                    <h3>Infinite Realms</h3>
-                    <p class="project-type">MBA Thesis</p>
-                    <p>Developed a feasibility study and business model for an AI-driven gaming platform delivering personalized, dynamic game worlds. Applied market research, audience segmentation, and financial forecasting to design a scalable digital product strategy.</p>
-                    <div class="project-tags">
-                        <span>Business Strategy</span>
-                        <span>Market Research</span>
-                        <span>AI</span>
-                        <span>Financial Modeling</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-icon"><i class="fas fa-drone"></i></div>
-                    <h3>Deliver-e</h3>
-                    <p class="project-type">Academic Project</p>
-                    <p>Proposed a business model for drone-based food delivery, designed to increase operational efficiency and customer satisfaction. Developed branding, UX flow, and go-to-market positioning strategy.</p>
-                    <div class="project-tags">
-                        <span>Product Marketing</span>
-                        <span>UX Design</span>
-                        <span>Branding</span>
-                        <span>Go-to-Market</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact -->
     <section id="contact">
         <div class="container">
@@ -253,7 +303,7 @@
                     <i class="fas fa-phone"></i>
                     <span>+39 339 244 2704</span>
                 </a>
-                <a href="https://www.linkedin.com/in/andreas-violides-70113319a/" target="_blank" class="contact-item">
+                <a href="https://www.linkedin.com/in/andreas-violides-70113319a/" target="_blank" rel="noopener noreferrer" class="contact-item">
                     <i class="fab fa-linkedin"></i>
                     <span>LinkedIn</span>
                 </a>
@@ -267,6 +317,6 @@
         <p>&copy; 2026 Andreas Violides. All rights reserved.</p>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js?v=4"></script>
 </body>
 </html>
